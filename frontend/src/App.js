@@ -50,7 +50,14 @@ function App() {
       {error && <p className="text-danger">{error}</p>}
       {countryInfo && (
         <div className="mt-4">
-          <h2>Country Information</h2>
+          <img
+            src={countryInfo.flags && countryInfo.flags.png}
+            alt={`Flag of ${countryInfo.name && countryInfo.name.common}`}
+            className="img-fluid"
+          />
+          <p>
+            
+          </p>
           <p>
             <strong>Country Name:</strong> {countryInfo.name && countryInfo.name.common}
           </p>
@@ -76,11 +83,6 @@ function App() {
               ))}
             </div>
           )}
-          <img
-            src={countryInfo.flags && countryInfo.flags.png}
-            alt={`Flag of ${countryInfo.name && countryInfo.name.common}`}
-            className="img-fluid"
-          />
         </div>
       )}
     </div>
@@ -88,5 +90,3 @@ function App() {
 }
 
 export default App;
-
-
